@@ -4,7 +4,7 @@
 
 MAIN = book
 
-book.pdf: *.Rmd build.R in_header.tex
+book.pdf: *.Rmd build.R in_header.tex packages
 	Rscript -e "source('build.R')"
 
 clean:
@@ -19,3 +19,5 @@ cleaner:
 	rm -fv ../graphics/*.pdf
 	rm -fvr auto/
 
+packages: packages.R
+	Rscript -e "source('packages.R')"

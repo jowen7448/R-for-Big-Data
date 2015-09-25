@@ -8,9 +8,9 @@ double mean_c(NumericVector x){
   double mean = 0;
 
   for(i=0; i<n; i++){
-    mean = mean + x[i]/n;
+    mean += x[i];
   }
-  return mean;
+  return mean/n;
 }
 
 // [[Rcpp::export]]

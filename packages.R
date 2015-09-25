@@ -18,6 +18,7 @@ github_pkgs = c("r4bd")
 ## Packages not in a proper repo
 if(!"bigvis" %in% installed.packages()){
   devtools::install_github("hadley/bigvis")
+  devtools::install_github("hadley/bookdown")
 }
 
 ## create the data frames
